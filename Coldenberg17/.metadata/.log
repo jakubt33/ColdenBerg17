@@ -1,0 +1,93 @@
+!SESSION 2017-02-13 22:26:40.616 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\Coldenberg17\Code\Coldenberg17
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2017-02-13 22:26:45.014
+!MESSAGE Loading product manager
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2017-02-13 22:26:45.015
+!MESSAGE OS info: Windows 7, 6.1
+
+!ENTRY TrueSTUDIO 4 0 2017-02-13 22:26:46.728
+!MESSAGE Target:ARM, Model:Lite, Version:5.3.0, Installation dir:/C:/Program Files (x86)/Atollic/TrueSTUDIO for ARM Lite 5.3.0/ide/
+
+!ENTRY TrueSTUDIO 1 0 2017-02-13 22:26:47.802
+!MESSAGE License 1111-1111-1111-1111
+
+!ENTRY org.eclipse.osgi 2 1 2017-02-13 22:26:49.404
+!MESSAGE NLS missing message: MarketingDialog_This_window_is_not_displayedin_pro in: com.atollic.truestudio.startup.exposed.messages
+
+!ENTRY org.eclipse.osgi 2 1 2017-02-13 22:26:49.405
+!MESSAGE NLS missing message: MarketingDialog_btnUpgradeToPro_text in: com.atollic.truestudio.startup.exposed.messages
+
+!ENTRY com.atollic.truestudio.integration.processorexpert 0 0 2017-02-13 22:27:36.106
+!MESSAGE Atollic TrueSTUDIO Processor Expert integration is up.
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.246
+!MESSAGE sst.gp.core earlyStartup()
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.249
+!MESSAGE Register ResourceChangeListener to current workspace
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.251
+!MESSAGE Register WorkspaceSelectionListener to current workspace
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.290
+!MESSAGE ##sst.gp.core Util##PLATFORM_INSTALL_LOCATION: C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.291
+!MESSAGE Platform installed location : C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.312
+!MESSAGE IS_ATOLLIC_PLUGIN_INSTALLED : true
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.313
+!MESSAGE ATOLLIC_INSTALL_STATUS(stm32): -1
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.315
+!MESSAGE ATOLLIC_INSTALL_STATUS(avr): -1
+
+!ENTRY sst.gp.core 1 0 2017-02-13 22:27:36.316
+!MESSAGE ATOLLIC_INSTALL_STATUS(arm): 2
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2017-02-13 22:27:36.335
+!MESSAGE iconv is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2017-02-13 22:27:36.338
+!MESSAGE est is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2017-02-13 22:27:36.341
+!MESSAGE libiconv-2 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2017-02-13 22:27:36.344
+!MESSAGE libintl-2 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2017-02-13 22:27:36.350
+!MESSAGE xerces-c_2_7 is loaded.
+
+!ENTRY com.suresofttech.cs.rimx 1 0 2017-02-13 22:27:36.353
+!MESSAGE RIMXJNI is loaded.
+
+!ENTRY sst.csgp 1 0 2017-02-13 22:27:36.501
+!MESSAGE platform install loc : C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide
+
+!ENTRY sst.tm 1 0 2017-02-13 22:27:36.510
+!MESSAGE C:\Program Files (x86)\Atollic\TrueSTUDIO for ARM Lite 5.3.0\ide\plugins\sst.tm_1.1.2.201408221116\CSHOME\
+
+!ENTRY sst.tm 1 0 2017-02-13 22:27:36.558
+!MESSAGE D:\Coldenberg17\Code\Coldenberg17\.metadata\.plugins\sst.tm
+
+!ENTRY sst.tm 1 0 2017-02-13 22:27:43.301
+!MESSAGE 
+
+
+---------------------------------------------------
+2017/02/13 22:27:43
+---------------------------------------------------
+
+
+!ENTRY com.atollic.truestudio.productmanager 1 0 2017-02-13 22:30:59.994
+!MESSAGE Unloading product manager
