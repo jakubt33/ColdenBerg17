@@ -35,10 +35,15 @@
 #include "stm32f1xx_hal.h"
 
 /* USER CODE BEGIN Includes */
+#include "Application/Logic.h"
 #include "Application/Buttons/Buttons.h"
 #include "Application/Display/Display.h"
 #include "Application/LEDs/LEDs.h"
+#include "Application/Ntc/Ntc.h"
 #include "Application/Relays/Relays.h"
+
+#include "Managers/LedsManager/LedsManager.h"
+#include "Managers/TemperatureManager/TemperatureManager.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -101,46 +106,31 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		/*! Inputs */
-//		Ntc_Perform();
-	  	static uint8_t number=0;
 		if(b10msPassed)
 		{
-			Display_Perform();
+			/*! Inputs */
+			Ntc_Perform();   //Get Temperature
 			Buttons_Perform();
 			Buttons_GenerateEvent();
 
-			if(Button_GetEvent(dButton1) == dButtonEvent_Click)
-			{
-				LEDs_SetState(dLed1, !LEDs_GetState(dLed1) );
-				number++;
-			}
-			if(Button_GetEvent(dButton2) == dButtonEvent_Click)
-			{
-				LEDs_SetState(dLed2, !LEDs_GetState(dLed2) );
-				number++;
-			}
-			if(Button_GetEvent(dButton3) == dButtonEvent_Click)
-			{
-				LEDs_SetState(dLed3, !LEDs_GetState(dLed3) );
-				number++;
-			}
-			if(Button_GetEvent(dButton3) == dButtonEvent_Pressed3s)
-			{
-				number = 0;
-			}
-			Display_DisplayNumber( number );
 
-			Relays_LightSetState( true );
-			Relays_CompressorSetState( true );
 			/*! Logic */
-		//			Logic_Perform();
+			Logic_Perform();  //Decide what is displayed
+
+
+			/*! Managers */
+			LedsManager_Perform();
+			TemperatureManager_Perform(); //Manage relays to get stable temperature
+			//LightManagerPerform(); -> tick time when light is on
+
 
 			/*! Outputs */
+			Display_Perform();
 			Relays_Perform();
 			LEDs_Perform();
 
 
+			/*! Keep it at the bottom */
 			b10msPassed = false;
 		}
   /* USER CODE END WHILE */

@@ -65,7 +65,6 @@
 #define BUTTON_3_PIN     GPIO_PIN_7
 
 //Relays
-#warning "check Pinout!!!!!!!!!!!!!!!!"
 #define RelayCompressor_GPIO	GPIOB
 #define RelayCompressor_PIN     GPIO_PIN_15
 #define RelayCompressor_PinActiveState	1U
