@@ -8,19 +8,19 @@
 #include "TemperatureManager.h"
 #include "Drivers/PortsDefs.h"
 
-
+uint16_t temp = 0;
 /*! Public functions */
 void TemperatureManager_Perform( void )
 {
 
 }
 
-void TemperatureManager_SetTemp( uint8_t u8NewTemp )
+void TemperatureManager_SetTemp( uint16_t uNewTemp )
 {
-
+	temp = uNewTemp;
 }
 
-uint8_t TemperatureManager_GetTemp( void )
+uint16_t TemperatureManager_GetTemp( void )
 {
-	return 20;
+	return temp;
 }

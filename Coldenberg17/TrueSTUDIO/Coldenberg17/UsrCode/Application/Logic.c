@@ -17,6 +17,10 @@
 #include "Managers/TemperatureManager/TemperatureManager.h"
 #include "Managers/LedsManager/LedsManager.h"
 
+#define DefaultRestoredTemp 20u
+#define dMinTemp 5u
+#define dMaxTemp 30u
+
 typedef enum
 {
 	dLogicInit = 0,
@@ -33,6 +37,7 @@ typedef struct
 } Logic_T;
 
 Logic_T kLogic;
+uint16_t uNewTemp = DefaultRestoredTemp;
 
 static void Logic_SetState( LogicState_T eNewState );
 
@@ -41,14 +46,18 @@ void Logic_Perform( void )
 {
 	Counter_TickTimeout( &kLogic.u16Timeout );
 
-	static uint8_t u8RestoredTemp = 99u;
+	static uint16_t u16RestoredTemp = 99u;
 	switch( kLogic.eState )
 	{
 	case dLogicInit:
-		u8RestoredTemp = Flash_GetLastValue();
-		if( u8RestoredTemp != 0)
+		u16RestoredTemp = Flash_GetLastValue();
+		if( u16RestoredTemp != 0xFFFF )
 		{
-			TemperatureManager_SetTemp( u8RestoredTemp );
+			TemperatureManager_SetTemp( u16RestoredTemp );
+		}
+		else
+		{
+			TemperatureManager_SetTemp( DefaultRestoredTemp );
 		}
 		Logic_SetState( dLogicDisplayCurrentTemp );
 		break;
@@ -88,14 +97,24 @@ void Logic_Perform( void )
 		break;
 
 	case dLogicSetTemp:
+		if (Button_GetEvent(dButton2) == dButtonEvent_Click || Button_GetEvent(dButton2) == dButtonEvent_Pressed200ms)
+		{
+			if ( uNewTemp < dMaxTemp ) uNewTemp++;
+		}
+		if (Button_GetEvent(dButton1) == dButtonEvent_Click || Button_GetEvent(dButton1) == dButtonEvent_Pressed200ms)
+		{
+			if ( uNewTemp > dMinTemp ) uNewTemp--;
+		}
+		Display_DisplayNumber( uNewTemp );
+
 		if (Button_GetEvent(dButton3) == dButtonEvent_Pressed3s)
 		{
 			Logic_SetState( dLogicDisplaySetTemp );
 		}
 		if (Button_GetEvent(dButton3) == dButtonEvent_Click)
 		{
-			Flash_SaveValue( 3 ); //TODO: add
-			TemperatureManager_SetTemp( 3 );
+			Flash_SaveValue( uNewTemp );
+			TemperatureManager_SetTemp( uNewTemp );
 			Logic_SetState( dLogicDisplayCurrentTemp );
 		}
 		break;
@@ -119,7 +138,6 @@ static void Logic_SetState( LogicState_T eNewState )
 	case dLogicDisplaySetTemp:
 		LedsManager_SetAllOn();
 		Counter_SetTimeout( &kLogic.u16Timeout, 300U );
-
 		break;
 
 	case dLogicSetTempWaitForReady:
@@ -127,6 +145,7 @@ static void Logic_SetState( LogicState_T eNewState )
 		break;
 
 	case dLogicSetTemp:
+		uNewTemp = TemperatureManager_GetTemp();
 		break;
 
 	default:

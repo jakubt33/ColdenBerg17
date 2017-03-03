@@ -11,7 +11,7 @@
 #include "stdbool.h"
 #include <stdint.h>
 
-void Flash_SaveValue( uint8_t u8NewValue );
-uint8_t Flash_GetLastValue( void );
+void Flash_SaveValue( uint16_t u16NewValue );
+uint16_t Flash_GetLastValue( void );
 
 #endif /* FLASH_H_ */

@@ -12,7 +12,7 @@
 #include <stdint.h>
 
 void TemperatureManager_Perform( void );
-void TemperatureManager_SetTemp( uint8_t u8NewTemp );
-uint8_t TemperatureManager_GetTemp( void );
+void TemperatureManager_SetTemp( uint16_t uNewTemp );
+uint16_t TemperatureManager_GetTemp( void );
 
 #endif /* TEMPERATUREMANAGER_H_ */

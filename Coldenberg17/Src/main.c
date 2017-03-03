@@ -43,6 +43,7 @@
 #include "Application/Relays/Relays.h"
 
 #include "Managers/LedsManager/LedsManager.h"
+#include "Managers/LightManager/LightManager.h"
 #include "Managers/TemperatureManager/TemperatureManager.h"
 /* USER CODE END Includes */
 
@@ -121,7 +122,7 @@ int main(void)
 			/*! Managers */
 			LedsManager_Perform();
 			TemperatureManager_Perform(); //Manage relays to get stable temperature
-			//LightManagerPerform(); -> tick time when light is on
+			LightManager_Perform();
 
 
 			/*! Outputs */
