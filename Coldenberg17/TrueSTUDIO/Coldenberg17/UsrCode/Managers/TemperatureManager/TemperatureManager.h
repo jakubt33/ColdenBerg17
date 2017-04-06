@@ -13,6 +13,6 @@
 
 void TemperatureManager_Perform( void );
 void TemperatureManager_SetTemp( uint16_t uNewTemp );
-uint16_t TemperatureManager_GetTemp( void );
+uint16_t TemperatureManager_GetTempTarget( void );
 
 #endif /* TEMPERATUREMANAGER_H_ */

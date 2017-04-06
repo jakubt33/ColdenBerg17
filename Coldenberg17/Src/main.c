@@ -42,6 +42,7 @@
 #include "Application/Ntc/Ntc.h"
 #include "Application/Relays/Relays.h"
 
+#include "Managers/BluetoothManager/BluetoothManager.h"
 #include "Managers/LedsManager/LedsManager.h"
 #include "Managers/LightManager/LightManager.h"
 #include "Managers/TemperatureManager/TemperatureManager.h"
@@ -57,6 +58,7 @@ WWDG_HandleTypeDef hwwdg;
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
 volatile bool b10msPassed = false;
+volatile bool b100msPassed = false;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -98,6 +100,7 @@ int main(void)
   MX_WWDG_Init();
 
   /* USER CODE BEGIN 2 */
+  Ntc_Initialize();
   Relays_Init();
   Buttons_Init();
   Display_InitState();
@@ -107,33 +110,41 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-		if(b10msPassed)
-		{
-			/*! Inputs */
-			Ntc_Perform();   //Get Temperature
-			Buttons_Perform();
-			Buttons_GenerateEvent();
+	if(b100msPassed)
+	{
+		Ntc_Perform();   				//Get Temperature
+		TemperatureManager_Perform(); 	//Manage relays to get stable temperature
+		BluetoothManager_Perform(); 	//Send ntc value if connected
+
+		/*! Keep it at the bottom */
+		b100msPassed = false;
+	}
+
+	if(b10msPassed)
+	{
+		/*! Inputs */
+		Buttons_Perform();
+		Buttons_GenerateEvent();
 
 
-			/*! Logic */
-			Logic_Perform();  //Decide what is displayed
+		/*! Logic */
+		Logic_Perform();  //Decide what is displayed
 
 
-			/*! Managers */
-			LedsManager_Perform();
-			TemperatureManager_Perform(); //Manage relays to get stable temperature
-			LightManager_Perform();
+		/*! Managers */
+		LedsManager_Perform();
+		LightManager_Perform();
 
 
-			/*! Outputs */
-			Display_Perform();
-			Relays_Perform();
-			LEDs_Perform();
+		/*! Outputs */
+		Display_Perform();
+		Relays_Perform();
+		LEDs_Perform();
 
 
-			/*! Keep it at the bottom */
-			b10msPassed = false;
-		}
+		/*! Keep it at the bottom */
+		b10msPassed = false;
+	}
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
@@ -212,7 +223,7 @@ static void MX_ADC1_Init(void)
     */
   hadc1.Instance = ADC1;
   hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;
-  hadc1.Init.ContinuousConvMode = DISABLE;
+  hadc1.Init.ContinuousConvMode = ENABLE;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.DataAlign = ADC_DATAALIGN_RIGHT;

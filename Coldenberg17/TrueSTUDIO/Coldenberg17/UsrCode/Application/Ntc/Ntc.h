@@ -11,7 +11,11 @@
 #include "stdbool.h"
 #include <stdint.h>
 
+#define dNtc_ErrorTemp 0xffff
+
+void Ntc_Initialize( void );
 void Ntc_Perform( void );
 uint16_t Ntc_GetValue( void  );
+uint16_t Ntc_GetRawValue( void );
 
 #endif /* NTC_H_ */

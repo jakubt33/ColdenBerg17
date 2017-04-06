@@ -65,15 +65,20 @@
 #define BUTTON_3_PIN     GPIO_PIN_7
 
 //Relays
-#define RelayCompressor_GPIO	GPIOB
-#define RelayCompressor_PIN     GPIO_PIN_15
+#define RelayCompressor_GPIO			GPIOB
+#define RelayCompressor_PIN     		GPIO_PIN_15
 #define RelayCompressor_PinActiveState	1U
 
-#define RelayTapfied_GPIO    	GPIOB
-#define RelayTapfied_PIN     	GPIO_PIN_14
+#define RelayTapfied_GPIO    			GPIOB
+#define RelayTapfied_PIN     			GPIO_PIN_14
 #define RelayTapfied_PinActiveState		1U
 
-#define RelayLight_GPIO    		GPIOB
-#define RelayLight_PIN     		GPIO_PIN_13
+#define RelayLight_GPIO    				GPIOB
+#define RelayLight_PIN     				GPIO_PIN_13
 #define RelayLight_PinActiveState		1U
+
+//BLuetooth
+#define BLUETOOTH_GPIO 		GPIOB
+#define BLUETOOTH_PIN 		GPIO_PIN_8
+
 #endif /* PORTSDEFS_H_ */

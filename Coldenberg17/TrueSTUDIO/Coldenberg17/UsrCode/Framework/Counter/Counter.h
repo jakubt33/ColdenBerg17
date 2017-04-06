@@ -11,6 +11,8 @@
 #include "stdbool.h"
 #include <stdint.h>
 
+typedef uint16_t kCounterDown;
+
 void Counter_SetTimeout( uint16_t *u16Counter, uint16_t u16NewTimeout );
 void Counter_TickTimeout( uint16_t *u16Counter );
 bool Counter_IsTimeoutExpired( uint16_t *u16Counter );

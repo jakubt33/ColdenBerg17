@@ -81,7 +81,7 @@ void Logic_Perform( void )
 		break;
 
 	case dLogicDisplaySetTemp:
-		Display_DisplayNumber( TemperatureManager_GetTemp() );
+		Display_DisplayNumber( TemperatureManager_GetTempTarget() );
 
 		if( Counter_IsTimeoutExpired( &kLogic.u16Timeout ) )
 		{
@@ -145,7 +145,7 @@ static void Logic_SetState( LogicState_T eNewState )
 		break;
 
 	case dLogicSetTemp:
-		uNewTemp = TemperatureManager_GetTemp();
+		uNewTemp = TemperatureManager_GetTempTarget();
 		break;
 
 	default:

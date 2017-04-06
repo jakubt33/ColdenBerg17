@@ -172,14 +172,21 @@ void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
 	extern volatile bool b10msPassed;
+	extern volatile bool b100msPassed;
+
 	static uint16_t u16Counter1ms=0U;
 
 	u16Counter1ms++;
 
-	if(u16Counter1ms == 10U)
+	if(u16Counter1ms % 10 == 0U)
 	{
-		u16Counter1ms = 0U;
 		b10msPassed = true;
+	}
+
+	if(u16Counter1ms == 100U)
+	{
+		b100msPassed = true;
+		u16Counter1ms = 0U;
 	}
 
   /* USER CODE END SysTick_IRQn 0 */
