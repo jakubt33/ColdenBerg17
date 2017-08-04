@@ -59,6 +59,8 @@ Discarded input sections
  .text          0x00000000        0x0 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
  .data          0x00000000        0x0 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
  .bss           0x00000000        0x0 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+ .text.Ntc_GetRawValue
+                0x00000000        0xc TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
  .text          0x00000000        0x0 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
  .data          0x00000000        0x0 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
  .bss           0x00000000        0x0 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
@@ -570,7 +572,7 @@ LOAD c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/.
                 0x08000000                g_pfnVectors
                 0x080001d0                . = ALIGN (0x4)
 
-.text           0x080001d0     0x29cc
+.text           0x080001d0     0x29dc
                 0x080001d0                . = ALIGN (0x4)
  *(.text)
  .text          0x080001d0       0x40 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
@@ -579,477 +581,474 @@ LOAD c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/.
                 0x08000210                __aeabi_llsr
  *(.text*)
  .text.TemperatureManager_Perform
-                0x08000228       0xdc TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
+                0x08000228       0xe0 TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
                 0x08000228                TemperatureManager_Perform
  .text.TemperatureManager_SetTemp
-                0x08000304        0xc TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
-                0x08000304                TemperatureManager_SetTemp
+                0x08000308        0xc TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
+                0x08000308                TemperatureManager_SetTemp
  .text.TemperatureManager_GetTempTarget
-                0x08000310        0xc TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
-                0x08000310                TemperatureManager_GetTempTarget
+                0x08000314        0xc TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
+                0x08000314                TemperatureManager_GetTempTarget
  .text.LightManager_Perform
-                0x0800031c       0x48 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LightManager\LightManager.o
-                0x0800031c                LightManager_Perform
+                0x08000320       0x48 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LightManager\LightManager.o
+                0x08000320                LightManager_Perform
  .text.LedsManager_Perform
-                0x08000364       0xb0 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
-                0x08000364                LedsManager_Perform
+                0x08000368       0xb0 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
+                0x08000368                LedsManager_Perform
  .text.LedsManager_SetBlink
-                0x08000414       0x30 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
-                0x08000414                LedsManager_SetBlink
+                0x08000418       0x30 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
+                0x08000418                LedsManager_SetBlink
  .text.LedsManager_SetAllOff
-                0x08000444        0xc TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
-                0x08000444                LedsManager_SetAllOff
+                0x08000448        0xc TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
+                0x08000448                LedsManager_SetAllOff
  .text.LedsManager_SetAllOn
-                0x08000450        0xc TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
-                0x08000450                LedsManager_SetAllOn
+                0x08000454        0xc TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
+                0x08000454                LedsManager_SetAllOn
  .text.BluetoothManager_Perform
-                0x0800045c       0x38 TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
-                0x0800045c                BluetoothManager_Perform
+                0x08000460       0x30 TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
+                0x08000460                BluetoothManager_Perform
  .text.Flash_SaveValue
-                0x08000494       0x64 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
-                0x08000494                Flash_SaveValue
+                0x08000490       0x64 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
+                0x08000490                Flash_SaveValue
  .text.Flash_GetLastValue
-                0x080004f8       0x28 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
-                0x080004f8                Flash_GetLastValue
+                0x080004f4       0x28 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
+                0x080004f4                Flash_GetLastValue
  .text.FIR_Initialize
-                0x08000520        0xc TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
-                0x08000520                FIR_Initialize
+                0x0800051c        0xc TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
+                0x0800051c                FIR_Initialize
  .text.FIR_RegisterValue
-                0x0800052c       0x38 TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
-                0x0800052c                FIR_RegisterValue
+                0x08000528       0x38 TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
+                0x08000528                FIR_RegisterValue
  .text.FIR_GetFilteredValue
-                0x08000564        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
-                0x08000564                FIR_GetFilteredValue
+                0x08000560        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
+                0x08000560                FIR_GetFilteredValue
  .text.Debouncer_Init
-                0x08000568        0xa TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
-                0x08000568                Debouncer_Init
+                0x08000564        0xa TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
+                0x08000564                Debouncer_Init
  .text.Debouncer_Apply
-                0x08000572       0x1c TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
-                0x08000572                Debouncer_Apply
+                0x0800056e       0x1c TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
+                0x0800056e                Debouncer_Apply
  .text.Debouncer_GetData
-                0x0800058e        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
-                0x0800058e                Debouncer_GetData
+                0x0800058a        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
+                0x0800058a                Debouncer_GetData
  .text.Counter_SetTimeout
-                0x08000592        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
-                0x08000592                Counter_SetTimeout
+                0x0800058e        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
+                0x0800058e                Counter_SetTimeout
  .text.Counter_TickTimeout
-                0x08000596        0xa TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
-                0x08000596                Counter_TickTimeout
+                0x08000592        0xa TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
+                0x08000592                Counter_TickTimeout
  .text.Counter_IsTimeoutExpired
-                0x080005a0        0xc TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
-                0x080005a0                Counter_IsTimeoutExpired
+                0x0800059c        0xc TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
+                0x0800059c                Counter_IsTimeoutExpired
  .text.Compressor_SetState
-                0x080005ac       0x70 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+                0x080005a8       0x70 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
  .text.Relays_Init
-                0x0800061c       0x40 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
-                0x0800061c                Relays_Init
+                0x08000618       0x40 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+                0x08000618                Relays_Init
  .text.Relays_Perform
-                0x0800065c       0x70 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
-                0x0800065c                Relays_Perform
+                0x08000658       0x70 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+                0x08000658                Relays_Perform
  .text.Relays_CompressorSetState
-                0x080006cc        0xc TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
-                0x080006cc                Relays_CompressorSetState
+                0x080006c8        0xc TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+                0x080006c8                Relays_CompressorSetState
  .text.Relays_LightSetState
-                0x080006d8       0x14 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
-                0x080006d8                Relays_LightSetState
+                0x080006d4       0x14 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+                0x080006d4                Relays_LightSetState
  .text.Ntc_Initialize
-                0x080006ec       0x24 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
-                0x080006ec                Ntc_Initialize
+                0x080006e8       0x24 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+                0x080006e8                Ntc_Initialize
  .text.Ntc_Perform
-                0x08000710       0x28 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
-                0x08000710                Ntc_Perform
+                0x0800070c       0x28 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+                0x0800070c                Ntc_Perform
  .text.Ntc_GetValue
-                0x08000738       0x2c TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
-                0x08000738                Ntc_GetValue
- .text.Ntc_GetRawValue
-                0x08000764        0xc TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
-                0x08000764                Ntc_GetRawValue
+                0x08000734       0x4c TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+                0x08000734                Ntc_GetValue
  .text.Logic_Perform
-                0x08000770      0x15c TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
-                0x08000770                Logic_Perform
+                0x08000780      0x15c TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+                0x08000780                Logic_Perform
  .text.LEDs_Perform
-                0x080008cc       0x3c TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
-                0x080008cc                LEDs_Perform
+                0x080008dc       0x3c TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
+                0x080008dc                LEDs_Perform
  .text.LEDs_SetState
-                0x08000908       0x24 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
-                0x08000908                LEDs_SetState
+                0x08000918       0x24 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
+                0x08000918                LEDs_SetState
  .text.Display_9
-                0x0800092c       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x0800093c       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_8
-                0x08000984       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000994       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_7
-                0x080009dc       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x080009ec       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_6
-                0x08000a34       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000a44       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_5
-                0x08000a8c       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000a9c       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_4
-                0x08000ae4       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000af4       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_3
-                0x08000b3c       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000b4c       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_2
-                0x08000b94       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000ba4       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_1
-                0x08000bec       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000bfc       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_0
-                0x08000c44       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000c54       0x58 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .text.Display_Perform
-                0x08000c9c       0x74 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
-                0x08000c9c                Display_Perform
+                0x08000cac       0x74 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000cac                Display_Perform
  .text.Display_InitState
-                0x08000d10       0x70 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
-                0x08000d10                Display_InitState
+                0x08000d20       0x70 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000d20                Display_InitState
  .text.Display_DisplayNumber
-                0x08000d80        0xc TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
-                0x08000d80                Display_DisplayNumber
+                0x08000d90        0xc TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08000d90                Display_DisplayNumber
  .text.Buttons_Perform
-                0x08000d8c       0x5c TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
-                0x08000d8c                Buttons_Perform
+                0x08000d9c       0x5c TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+                0x08000d9c                Buttons_Perform
  .text.Buttons_Init
-                0x08000de8       0x40 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
-                0x08000de8                Buttons_Init
+                0x08000df8       0x40 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+                0x08000df8                Buttons_Init
  .text.Buttons_GenerateEvent
-                0x08000e28       0x50 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
-                0x08000e28                Buttons_GenerateEvent
+                0x08000e38       0x50 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+                0x08000e38                Buttons_GenerateEvent
  .text.Button_GetEvent
-                0x08000e78       0x10 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
-                0x08000e78                Button_GetEvent
+                0x08000e88       0x10 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+                0x08000e88                Button_GetEvent
  .text.SystemInit
-                0x08000e88       0x50 Src\system_stm32f1xx.o
-                0x08000e88                SystemInit
+                0x08000e98       0x50 Src\system_stm32f1xx.o
+                0x08000e98                SystemInit
  .text.NMI_Handler
-                0x08000ed8        0x4 Src\stm32f1xx_it.o
-                0x08000ed8                NMI_Handler
+                0x08000ee8        0x4 Src\stm32f1xx_it.o
+                0x08000ee8                NMI_Handler
  .text.HardFault_Handler
-                0x08000edc        0x2 Src\stm32f1xx_it.o
-                0x08000edc                HardFault_Handler
+                0x08000eec        0x2 Src\stm32f1xx_it.o
+                0x08000eec                HardFault_Handler
  .text.MemManage_Handler
-                0x08000ede        0x2 Src\stm32f1xx_it.o
-                0x08000ede                MemManage_Handler
+                0x08000eee        0x2 Src\stm32f1xx_it.o
+                0x08000eee                MemManage_Handler
  .text.BusFault_Handler
-                0x08000ee0        0x2 Src\stm32f1xx_it.o
-                0x08000ee0                BusFault_Handler
+                0x08000ef0        0x2 Src\stm32f1xx_it.o
+                0x08000ef0                BusFault_Handler
  .text.UsageFault_Handler
-                0x08000ee2        0x2 Src\stm32f1xx_it.o
-                0x08000ee2                UsageFault_Handler
+                0x08000ef2        0x2 Src\stm32f1xx_it.o
+                0x08000ef2                UsageFault_Handler
  .text.SVC_Handler
-                0x08000ee4        0x2 Src\stm32f1xx_it.o
-                0x08000ee4                SVC_Handler
+                0x08000ef4        0x2 Src\stm32f1xx_it.o
+                0x08000ef4                SVC_Handler
  .text.DebugMon_Handler
-                0x08000ee6        0x2 Src\stm32f1xx_it.o
-                0x08000ee6                DebugMon_Handler
+                0x08000ef6        0x2 Src\stm32f1xx_it.o
+                0x08000ef6                DebugMon_Handler
  .text.PendSV_Handler
-                0x08000ee8        0x2 Src\stm32f1xx_it.o
-                0x08000ee8                PendSV_Handler
- *fill*         0x08000eea        0x2 
+                0x08000ef8        0x2 Src\stm32f1xx_it.o
+                0x08000ef8                PendSV_Handler
+ *fill*         0x08000efa        0x2 
  .text.SysTick_Handler
-                0x08000eec       0x48 Src\stm32f1xx_it.o
-                0x08000eec                SysTick_Handler
+                0x08000efc       0x48 Src\stm32f1xx_it.o
+                0x08000efc                SysTick_Handler
  .text.ADC1_IRQHandler
-                0x08000f34        0xc Src\stm32f1xx_it.o
-                0x08000f34                ADC1_IRQHandler
+                0x08000f44        0xc Src\stm32f1xx_it.o
+                0x08000f44                ADC1_IRQHandler
  .text.USART2_IRQHandler
-                0x08000f40        0xc Src\stm32f1xx_it.o
-                0x08000f40                USART2_IRQHandler
+                0x08000f50        0xc Src\stm32f1xx_it.o
+                0x08000f50                USART2_IRQHandler
  .text.HAL_MspInit
-                0x08000f4c       0x8c Src\stm32f1xx_hal_msp.o
-                0x08000f4c                HAL_MspInit
+                0x08000f5c       0x8c Src\stm32f1xx_hal_msp.o
+                0x08000f5c                HAL_MspInit
  .text.HAL_ADC_MspInit
-                0x08000fd8       0x50 Src\stm32f1xx_hal_msp.o
-                0x08000fd8                HAL_ADC_MspInit
+                0x08000fe8       0x50 Src\stm32f1xx_hal_msp.o
+                0x08000fe8                HAL_ADC_MspInit
  .text.HAL_UART_MspInit
-                0x08001028       0x68 Src\stm32f1xx_hal_msp.o
-                0x08001028                HAL_UART_MspInit
+                0x08001038       0x68 Src\stm32f1xx_hal_msp.o
+                0x08001038                HAL_UART_MspInit
  .text.HAL_WWDG_MspInit
-                0x08001090       0x28 Src\stm32f1xx_hal_msp.o
-                0x08001090                HAL_WWDG_MspInit
+                0x080010a0       0x28 Src\stm32f1xx_hal_msp.o
+                0x080010a0                HAL_WWDG_MspInit
  .text.SystemClock_Config
-                0x080010b8       0x78 Src\main.o
-                0x080010b8                SystemClock_Config
+                0x080010c8       0x78 Src\main.o
+                0x080010c8                SystemClock_Config
  .text.startup.main
-                0x08001130      0x188 Src\main.o
-                0x08001130                main
+                0x08001140      0x188 Src\main.o
+                0x08001140                main
  .text.HAL_WWDG_Init
-                0x080012b8       0x46 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
-                0x080012b8                HAL_WWDG_Init
- *fill*         0x080012fe        0x2 
+                0x080012c8       0x46 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
+                0x080012c8                HAL_WWDG_Init
+ *fill*         0x0800130e        0x2 
  .text.UART_SetConfig
-                0x08001300      0x130 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+                0x08001310      0x130 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
  .text.HAL_UART_Init
-                0x08001430       0x58 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
-                0x08001430                HAL_UART_Init
+                0x08001440       0x58 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+                0x08001440                HAL_UART_Init
  .text.HAL_UART_Transmit_IT
-                0x08001488       0x54 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
-                0x08001488                HAL_UART_Transmit_IT
+                0x08001498       0x54 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+                0x08001498                HAL_UART_Transmit_IT
  .text.HAL_UART_TxCpltCallback
-                0x080014dc        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
-                0x080014dc                HAL_UART_TxCpltCallback
+                0x080014ec        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+                0x080014ec                HAL_UART_TxCpltCallback
  .text.HAL_UART_RxCpltCallback
-                0x080014de        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
-                0x080014de                HAL_UART_RxCpltCallback
+                0x080014ee        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+                0x080014ee                HAL_UART_RxCpltCallback
  .text.HAL_UART_ErrorCallback
-                0x080014e0        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
-                0x080014e0                HAL_UART_ErrorCallback
+                0x080014f0        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+                0x080014f0                HAL_UART_ErrorCallback
  .text.HAL_UART_IRQHandler
-                0x080014e2      0x184 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
-                0x080014e2                HAL_UART_IRQHandler
- *fill*         0x08001666        0x2 
+                0x080014f2      0x184 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+                0x080014f2                HAL_UART_IRQHandler
+ *fill*         0x08001676        0x2 
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x08001668      0x108 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
-                0x08001668                HAL_RCCEx_PeriphCLKConfig
+                0x08001678      0x108 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
+                0x08001678                HAL_RCCEx_PeriphCLKConfig
  .text.HAL_RCCEx_GetPeriphCLKFreq
-                0x08001770       0x7c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
-                0x08001770                HAL_RCCEx_GetPeriphCLKFreq
+                0x08001780       0x7c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
+                0x08001780                HAL_RCCEx_GetPeriphCLKFreq
  .text.HAL_RCC_OscConfig
-                0x080017ec      0x4dc Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x080017ec                HAL_RCC_OscConfig
+                0x080017fc      0x4dc Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x080017fc                HAL_RCC_OscConfig
  .text.HAL_RCC_EnableCSS
-                0x08001cc8       0x1c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x08001cc8                HAL_RCC_EnableCSS
+                0x08001cd8       0x1c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x08001cd8                HAL_RCC_EnableCSS
  .text.HAL_RCC_GetSysClockFreq
-                0x08001ce4       0xb0 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x08001ce4                HAL_RCC_GetSysClockFreq
+                0x08001cf4       0xb0 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x08001cf4                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_ClockConfig
-                0x08001d94      0x130 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x08001d94                HAL_RCC_ClockConfig
+                0x08001da4      0x130 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x08001da4                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x08001ec4        0xc Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x08001ec4                HAL_RCC_GetHCLKFreq
+                0x08001ed4        0xc Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x08001ed4                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x08001ed0       0x30 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x08001ed0                HAL_RCC_GetPCLK1Freq
+                0x08001ee0       0x30 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x08001ee0                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x08001f00       0x30 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x08001f00                HAL_RCC_GetPCLK2Freq
+                0x08001f10       0x30 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x08001f10                HAL_RCC_GetPCLK2Freq
  .text.HAL_RCC_CSSCallback
-                0x08001f30        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x08001f30                HAL_RCC_CSSCallback
- *fill*         0x08001f32        0x2 
+                0x08001f40        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x08001f40                HAL_RCC_CSSCallback
+ *fill*         0x08001f42        0x2 
  .text.HAL_RCC_NMI_IRQHandler
-                0x08001f34       0x20 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
-                0x08001f34                HAL_RCC_NMI_IRQHandler
+                0x08001f44       0x20 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+                0x08001f44                HAL_RCC_NMI_IRQHandler
  .text.HAL_GPIO_Init
-                0x08001f54      0x184 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
-                0x08001f54                HAL_GPIO_Init
+                0x08001f64      0x184 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
+                0x08001f64                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x080020d8        0xc Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
-                0x080020d8                HAL_GPIO_ReadPin
+                0x080020e8        0xc Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
+                0x080020e8                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x080020e4        0x8 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
-                0x080020e4                HAL_GPIO_WritePin
+                0x080020f4        0x8 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
+                0x080020f4                HAL_GPIO_WritePin
  .text.FLASH_MassErase.isra.0
-                0x080020ec       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
+                0x080020fc       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
  .text.FLASH_PageErase
-                0x08002110       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
-                0x08002110                FLASH_PageErase
+                0x08002120       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
+                0x08002120                FLASH_PageErase
  .text.HAL_FLASHEx_Erase
-                0x08002134       0x9c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
-                0x08002134                HAL_FLASHEx_Erase
+                0x08002144       0x9c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
+                0x08002144                HAL_FLASHEx_Erase
  .text.FLASH_SetErrorCode
-                0x080021d0       0x50 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+                0x080021e0       0x50 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
  .text.HAL_FLASH_Unlock
-                0x08002220       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
-                0x08002220                HAL_FLASH_Unlock
+                0x08002230       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+                0x08002230                HAL_FLASH_Unlock
  .text.HAL_FLASH_Lock
-                0x08002244       0x14 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
-                0x08002244                HAL_FLASH_Lock
+                0x08002254       0x14 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+                0x08002254                HAL_FLASH_Lock
  .text.FLASH_WaitForLastOperation
-                0x08002258       0x54 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
-                0x08002258                FLASH_WaitForLastOperation
+                0x08002268       0x54 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+                0x08002268                FLASH_WaitForLastOperation
  .text.HAL_FLASH_Program
-                0x080022ac       0x90 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
-                0x080022ac                HAL_FLASH_Program
+                0x080022bc       0x90 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+                0x080022bc                HAL_FLASH_Program
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0800233c       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
-                0x0800233c                HAL_NVIC_SetPriorityGrouping
+                0x0800234c       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+                0x0800234c                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x08002360       0x64 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
-                0x08002360                HAL_NVIC_SetPriority
+                0x08002370       0x64 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+                0x08002370                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x080023c4       0x18 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
-                0x080023c4                HAL_NVIC_EnableIRQ
+                0x080023d4       0x18 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+                0x080023d4                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x080023dc       0x2c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
-                0x080023dc                HAL_SYSTICK_Config
+                0x080023ec       0x2c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+                0x080023ec                HAL_SYSTICK_Config
  .text.HAL_SYSTICK_CLKSourceConfig
-                0x08002408       0x18 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
-                0x08002408                HAL_SYSTICK_CLKSourceConfig
+                0x08002418       0x18 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+                0x08002418                HAL_SYSTICK_CLKSourceConfig
  .text.HAL_SYSTICK_Callback
-                0x08002420        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
-                0x08002420                HAL_SYSTICK_Callback
+                0x08002430        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+                0x08002430                HAL_SYSTICK_Callback
  .text.HAL_SYSTICK_IRQHandler
-                0x08002422        0x8 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
-                0x08002422                HAL_SYSTICK_IRQHandler
+                0x08002432        0x8 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+                0x08002432                HAL_SYSTICK_IRQHandler
  .text.HAL_ADCEx_InjectedConvCpltCallback
-                0x0800242a        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
-                0x0800242a                HAL_ADCEx_InjectedConvCpltCallback
+                0x0800243a        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
+                0x0800243a                HAL_ADCEx_InjectedConvCpltCallback
  .text.HAL_ADC_PollForConversion
-                0x0800242c      0x14c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x0800242c                HAL_ADC_PollForConversion
+                0x0800243c      0x14c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x0800243c                HAL_ADC_PollForConversion
  .text.HAL_ADC_GetValue
-                0x08002578        0x6 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x08002578                HAL_ADC_GetValue
+                0x08002588        0x6 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x08002588                HAL_ADC_GetValue
  .text.HAL_ADC_ConvCpltCallback
-                0x0800257e        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x0800257e                HAL_ADC_ConvCpltCallback
+                0x0800258e        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x0800258e                HAL_ADC_ConvCpltCallback
  .text.HAL_ADC_LevelOutOfWindowCallback
-                0x08002580        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x08002580                HAL_ADC_LevelOutOfWindowCallback
+                0x08002590        0x2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x08002590                HAL_ADC_LevelOutOfWindowCallback
  .text.HAL_ADC_IRQHandler
-                0x08002582       0xec Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x08002582                HAL_ADC_IRQHandler
- *fill*         0x0800266e        0x2 
+                0x08002592       0xec Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x08002592                HAL_ADC_IRQHandler
+ *fill*         0x0800267e        0x2 
  .text.HAL_ADC_ConfigChannel
-                0x08002670      0x198 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x08002670                HAL_ADC_ConfigChannel
+                0x08002680      0x198 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x08002680                HAL_ADC_ConfigChannel
  .text.ADC_Enable
-                0x08002808       0x70 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x08002808                ADC_Enable
+                0x08002818       0x70 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x08002818                ADC_Enable
  .text.HAL_ADC_Start
-                0x08002878       0x8a Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x08002878                HAL_ADC_Start
+                0x08002888       0x8a Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x08002888                HAL_ADC_Start
  .text.ADC_ConversionStop_Disable
-                0x08002902       0x44 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x08002902                ADC_ConversionStop_Disable
- *fill*         0x08002946        0x2 
+                0x08002912       0x44 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x08002912                ADC_ConversionStop_Disable
+ *fill*         0x08002956        0x2 
  .text.HAL_ADC_Init
-                0x08002948      0x128 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
-                0x08002948                HAL_ADC_Init
+                0x08002958      0x128 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+                0x08002958                HAL_ADC_Init
  .text.HAL_InitTick
-                0x08002a70       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
-                0x08002a70                HAL_InitTick
+                0x08002a80       0x24 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+                0x08002a80                HAL_InitTick
  .text.HAL_Init
-                0x08002a94       0x16 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
-                0x08002a94                HAL_Init
- *fill*         0x08002aaa        0x2 
+                0x08002aa4       0x16 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+                0x08002aa4                HAL_Init
+ *fill*         0x08002aba        0x2 
  .text.HAL_IncTick
-                0x08002aac       0x10 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
-                0x08002aac                HAL_IncTick
+                0x08002abc       0x10 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+                0x08002abc                HAL_IncTick
  .text.HAL_GetTick
-                0x08002abc        0xc Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
-                0x08002abc                HAL_GetTick
+                0x08002acc        0xc Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+                0x08002acc                HAL_GetTick
  .text.HAL_Delay
-                0x08002ac8       0x1a Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
-                0x08002ac8                HAL_Delay
- *fill*         0x08002ae2        0x2 
+                0x08002ad8       0x1a Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+                0x08002ad8                HAL_Delay
+ *fill*         0x08002af2        0x2 
  .text.Reset_Handler
-                0x08002ae4       0x50 Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
-                0x08002ae4                Reset_Handler
+                0x08002af4       0x50 Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
+                0x08002af4                Reset_Handler
  .text.Default_Handler
-                0x08002b34        0x4 Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
-                0x08002b34                RTC_Alarm_IRQHandler
-                0x08002b34                EXTI2_IRQHandler
-                0x08002b34                TIM1_CC_IRQHandler
-                0x08002b34                PVD_IRQHandler
-                0x08002b34                EXTI3_IRQHandler
-                0x08002b34                EXTI0_IRQHandler
-                0x08002b34                TIM1_UP_TIM16_IRQHandler
-                0x08002b34                SPI1_IRQHandler
-                0x08002b34                TAMPER_IRQHandler
-                0x08002b34                TIM6_DAC_IRQHandler
-                0x08002b34                DMA1_Channel4_IRQHandler
-                0x08002b34                USART3_IRQHandler
-                0x08002b34                RTC_IRQHandler
-                0x08002b34                DMA1_Channel7_IRQHandler
-                0x08002b34                TIM4_IRQHandler
-                0x08002b34                I2C1_EV_IRQHandler
-                0x08002b34                DMA1_Channel6_IRQHandler
-                0x08002b34                TIM3_IRQHandler
-                0x08002b34                RCC_IRQHandler
-                0x08002b34                DMA1_Channel1_IRQHandler
-                0x08002b34                Default_Handler
-                0x08002b34                CEC_IRQHandler
-                0x08002b34                EXTI15_10_IRQHandler
-                0x08002b34                TIM7_IRQHandler
-                0x08002b34                EXTI9_5_IRQHandler
-                0x08002b34                DMA1_Channel5_IRQHandler
-                0x08002b34                EXTI4_IRQHandler
-                0x08002b34                TIM1_TRG_COM_TIM17_IRQHandler
-                0x08002b34                DMA1_Channel3_IRQHandler
-                0x08002b34                WWDG_IRQHandler
-                0x08002b34                TIM2_IRQHandler
-                0x08002b34                EXTI1_IRQHandler
-                0x08002b34                DMA1_Channel2_IRQHandler
-                0x08002b34                FLASH_IRQHandler
-                0x08002b34                USART1_IRQHandler
-                0x08002b34                I2C1_ER_IRQHandler
-                0x08002b34                TIM1_BRK_TIM15_IRQHandler
+                0x08002b44        0x4 Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
+                0x08002b44                RTC_Alarm_IRQHandler
+                0x08002b44                EXTI2_IRQHandler
+                0x08002b44                TIM1_CC_IRQHandler
+                0x08002b44                PVD_IRQHandler
+                0x08002b44                EXTI3_IRQHandler
+                0x08002b44                EXTI0_IRQHandler
+                0x08002b44                TIM1_UP_TIM16_IRQHandler
+                0x08002b44                SPI1_IRQHandler
+                0x08002b44                TAMPER_IRQHandler
+                0x08002b44                TIM6_DAC_IRQHandler
+                0x08002b44                DMA1_Channel4_IRQHandler
+                0x08002b44                USART3_IRQHandler
+                0x08002b44                RTC_IRQHandler
+                0x08002b44                DMA1_Channel7_IRQHandler
+                0x08002b44                TIM4_IRQHandler
+                0x08002b44                I2C1_EV_IRQHandler
+                0x08002b44                DMA1_Channel6_IRQHandler
+                0x08002b44                TIM3_IRQHandler
+                0x08002b44                RCC_IRQHandler
+                0x08002b44                DMA1_Channel1_IRQHandler
+                0x08002b44                Default_Handler
+                0x08002b44                CEC_IRQHandler
+                0x08002b44                EXTI15_10_IRQHandler
+                0x08002b44                TIM7_IRQHandler
+                0x08002b44                EXTI9_5_IRQHandler
+                0x08002b44                DMA1_Channel5_IRQHandler
+                0x08002b44                EXTI4_IRQHandler
+                0x08002b44                TIM1_TRG_COM_TIM17_IRQHandler
+                0x08002b44                DMA1_Channel3_IRQHandler
+                0x08002b44                WWDG_IRQHandler
+                0x08002b44                TIM2_IRQHandler
+                0x08002b44                EXTI1_IRQHandler
+                0x08002b44                DMA1_Channel2_IRQHandler
+                0x08002b44                FLASH_IRQHandler
+                0x08002b44                USART1_IRQHandler
+                0x08002b44                I2C1_ER_IRQHandler
+                0x08002b44                TIM1_BRK_TIM15_IRQHandler
  .text.__libc_init_array
-                0x08002b38       0x4c c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/../../../../arm-atollic-eabi/lib/armv7-m\libc.a(lib_a-init.o)
-                0x08002b38                __libc_init_array
+                0x08002b48       0x4c c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/../../../../arm-atollic-eabi/lib/armv7-m\libc.a(lib_a-init.o)
+                0x08002b48                __libc_init_array
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08002b84        0x0 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
+ .eh_frame      0x08002b94        0x0 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
  *(.init)
- .init          0x08002b84        0x4 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crti.o
-                0x08002b84                _init
- .init          0x08002b88        0x8 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtn.o
+ .init          0x08002b94        0x4 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crti.o
+                0x08002b94                _init
+ .init          0x08002b98        0x8 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtn.o
  *(.fini)
- .fini          0x08002b90        0x4 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crti.o
-                0x08002b90                _fini
- .fini          0x08002b94        0x8 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtn.o
-                0x08002b9c                . = ALIGN (0x4)
-                0x08002b9c                _etext = .
+ .fini          0x08002ba0        0x4 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crti.o
+                0x08002ba0                _fini
+ .fini          0x08002ba4        0x8 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtn.o
+                0x08002bac                . = ALIGN (0x4)
+                0x08002bac                _etext = .
 
-.vfp11_veneer   0x08002b9c        0x0
+.vfp11_veneer   0x08002bac        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08002b9c        0x0
+.v4_bx          0x08002bac        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x08002b9c        0x0
+.iplt           0x08002bac        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
 
-.rodata         0x08002b9c       0x60
-                0x08002b9c                . = ALIGN (0x4)
+.rodata         0x08002bac       0x60
+                0x08002bac                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08002b9c       0x20 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+ .rodata        0x08002bac       0x20 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
  *(.rodata*)
  .rodata.DigitTable
-                0x08002bbc       0x28 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x08002bcc       0x28 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .rodata.AHBPrescTable
-                0x08002be4       0x10 Src\system_stm32f1xx.o
-                0x08002be4                AHBPrescTable
+                0x08002bf4       0x10 Src\system_stm32f1xx.o
+                0x08002bf4                AHBPrescTable
  .rodata.APBPrescTable
-                0x08002bf4        0x8 Src\system_stm32f1xx.o
-                0x08002bf4                APBPrescTable
-                0x08002bfc                . = ALIGN (0x4)
+                0x08002c04        0x8 Src\system_stm32f1xx.o
+                0x08002c04                APBPrescTable
+                0x08002c0c                . = ALIGN (0x4)
 
-.rel.dyn        0x08002bfc        0x0
+.rel.dyn        0x08002c0c        0x0
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x08002bfc        0x0
-                0x08002bfc                __exidx_start = .
+.ARM            0x08002c0c        0x0
+                0x08002c0c                __exidx_start = .
  *(.ARM.exidx*)
-                0x08002bfc                __exidx_end = .
+                0x08002c0c                __exidx_end = .
 
-.preinit_array  0x08002bfc        0x0
-                0x08002bfc                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x08002c0c        0x0
+                0x08002c0c                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x08002bfc                PROVIDE (__preinit_array_end, .)
+                0x08002c0c                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x08002bfc        0x4
-                0x08002bfc                PROVIDE (__init_array_start, .)
+.init_array     0x08002c0c        0x4
+                0x08002c0c                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x08002bfc        0x4 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
-                0x08002c00                PROVIDE (__init_array_end, .)
+ .init_array    0x08002c0c        0x4 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
+                0x08002c10                PROVIDE (__init_array_end, .)
 
-.fini_array     0x08002c00        0x4
-                0x08002c00                PROVIDE (__fini_array_start, .)
+.fini_array     0x08002c10        0x4
+                0x08002c10                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08002c00        0x4 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
-                0x08002c04                PROVIDE (__fini_array_end, .)
-                0x08002c04                _sidata = LOADADDR (.data)
+ .fini_array    0x08002c10        0x4 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
+                0x08002c14                PROVIDE (__fini_array_end, .)
+                0x08002c14                _sidata = LOADADDR (.data)
 
-.data           0x20000000       0x5c load address 0x08002c04
+.data           0x20000000       0xd4 load address 0x08002c14
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -1059,89 +1058,89 @@ LOAD c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/.
  .data.u32Address
                 0x20000010        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
  .data.tempTable
-                0x20000014       0x40 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+                0x20000014       0xb8 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
                 0x20000014                tempTable
  .data.uNewTemp
-                0x20000054        0x2 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
-                0x20000054                uNewTemp
+                0x200000cc        0x2 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+                0x200000cc                uNewTemp
  .data.u16RestoredTemp.6455
-                0x20000056        0x2 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+                0x200000ce        0x2 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
  .data.SystemCoreClock
-                0x20000058        0x4 Src\system_stm32f1xx.o
-                0x20000058                SystemCoreClock
-                0x2000005c                . = ALIGN (0x4)
-                0x2000005c                _edata = .
+                0x200000d0        0x4 Src\system_stm32f1xx.o
+                0x200000d0                SystemCoreClock
+                0x200000d4                . = ALIGN (0x4)
+                0x200000d4                _edata = .
 
-.igot.plt       0x2000005c        0x0 load address 0x08002c60
+.igot.plt       0x200000d4        0x0 load address 0x08002ce8
  .igot.plt      0x00000000        0x0 c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
-                0x2000005c                . = ALIGN (0x4)
+                0x200000d4                . = ALIGN (0x4)
 
-.bss            0x20000060      0x1e0 load address 0x08002c60
-                0x20000060                _sbss = .
-                0x20000060                __bss_start__ = _sbss
+.bss            0x200000d8      0x1e0 load address 0x08002ce8
+                0x200000d8                _sbss = .
+                0x200000d8                __bss_start__ = _sbss
  *(.bss)
- .bss           0x20000060       0x1c c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
+ .bss           0x200000d8       0x1c c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtbegin.o
  *(.bss*)
  .bss.u16LightTimer
-                0x2000007c        0x2 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LightManager\LightManager.o
-                0x2000007c                u16LightTimer
+                0x200000f4        0x2 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LightManager\LightManager.o
+                0x200000f4                u16LightTimer
  .bss.u8AdcValue
-                0x2000007e        0x1 TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
-                0x2000007e                u8AdcValue
+                0x200000f6        0x1 TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
+                0x200000f6                u8AdcValue
  .bss.u8DisplayNumber
-                0x2000007f        0x1 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x200000f7        0x1 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .bss.bDig1.6417
-                0x20000080        0x1 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+                0x200000f8        0x1 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
  .bss.u8Counter.6424
-                0x20000081        0x1 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+                0x200000f9        0x1 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
  .bss.u16Counter1ms.6452
-                0x20000082        0x2 Src\stm32f1xx_it.o
+                0x200000fa        0x2 Src\stm32f1xx_it.o
  .bss.b10msPassed
-                0x20000084        0x1 Src\main.o
-                0x20000084                b10msPassed
+                0x200000fc        0x1 Src\main.o
+                0x200000fc                b10msPassed
  .bss.b100msPassed
-                0x20000085        0x1 Src\main.o
-                0x20000085                b100msPassed
- *fill*         0x20000086        0x2 
- .bss.uwTick    0x20000088        0x4 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+                0x200000fd        0x1 Src\main.o
+                0x200000fd                b100msPassed
+ *fill*         0x200000fe        0x2 
+ .bss.uwTick    0x20000100        0x4 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
  *(COMMON)
- COMMON         0x2000008c        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
-                0x2000008c                oTempManager
- COMMON         0x20000090        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
-                0x20000090                kLedsManager
- COMMON         0x20000094        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
-                0x20000094                kCompressor
- COMMON         0x20000098       0xd4 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
-                0x20000098                tBuffer
-                0x20000160                kFilter
- COMMON         0x2000016c        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
-                0x2000016c                kLogic
- COMMON         0x20000170        0x3 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
-                0x20000170                kLEDs
- *fill*         0x20000173        0x1 
- COMMON         0x20000174       0x24 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
-                0x20000174                tButtons
- COMMON         0x20000198       0x84 Src\main.o
-                0x20000198                hadc1
-                0x200001c8                hwwdg
-                0x200001dc                huart2
- *fill*         0x2000021c        0x4 
- COMMON         0x20000220       0x20 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
-                0x20000220                pFlash
-                0x20000240                . = ALIGN (0x4)
-                0x20000240                _ebss = .
-                0x20000240                __bss_end__ = _ebss
+ COMMON         0x20000104        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
+                0x20000104                oTempManager
+ COMMON         0x20000108        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
+                0x20000108                kLedsManager
+ COMMON         0x2000010c        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+                0x2000010c                kCompressor
+ COMMON         0x20000110       0xd4 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+                0x20000110                tBuffer
+                0x200001d8                kFilter
+ COMMON         0x200001e4        0x4 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+                0x200001e4                kLogic
+ COMMON         0x200001e8        0x3 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
+                0x200001e8                kLEDs
+ *fill*         0x200001eb        0x1 
+ COMMON         0x200001ec       0x24 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+                0x200001ec                tButtons
+ COMMON         0x20000210       0x84 Src\main.o
+                0x20000210                hadc1
+                0x20000240                hwwdg
+                0x20000254                huart2
+ *fill*         0x20000294        0x4 
+ COMMON         0x20000298       0x20 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+                0x20000298                pFlash
+                0x200002b8                . = ALIGN (0x4)
+                0x200002b8                _ebss = .
+                0x200002b8                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000240      0x600 load address 0x08002c60
-                0x20000240                . = ALIGN (0x4)
-                0x20000240                PROVIDE (end, .)
-                0x20000240                PROVIDE (_end, .)
-                0x20000440                . = (. + _Min_Heap_Size)
- *fill*         0x20000240      0x200 
-                0x20000840                . = (. + _Min_Stack_Size)
- *fill*         0x20000440      0x400 
-                0x20000840                . = ALIGN (0x4)
+                0x200002b8      0x600 load address 0x08002ce8
+                0x200002b8                . = ALIGN (0x4)
+                0x200002b8                PROVIDE (end, .)
+                0x200002b8                PROVIDE (_end, .)
+                0x200004b8                . = (. + _Min_Heap_Size)
+ *fill*         0x200002b8      0x200 
+                0x200008b8                . = (. + _Min_Stack_Size)
+ *fill*         0x200004b8      0x400 
+                0x200008b8                . = ALIGN (0x4)
 
 /DISCARD/
  libc.a(*)
@@ -1223,37 +1222,37 @@ LOAD c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/.
                 0x0000067c       0x1d c:/program files (x86)/atollic/truestudio for arm lite 5.3.0/armtools/bin/../lib/gcc/arm-atollic-eabi/4.8.3/armv7-m/crtn.o
 OUTPUT(Coldenberg17.elf elf32-littlearm)
 
-.debug_info     0x00000000     0xd98c
- .debug_info    0x00000000      0x410 TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
- .debug_info    0x00000410      0x22f TrueSTUDIO\Coldenberg17\UsrCode\Managers\LightManager\LightManager.o
- .debug_info    0x0000063f      0x3af TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
- .debug_info    0x000009ee      0x5f7 TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
- .debug_info    0x00000fe5      0x2a9 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
- .debug_info    0x0000128e      0x1de TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
- .debug_info    0x0000146c      0x162 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
- .debug_info    0x000015ce      0x167 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
- .debug_info    0x00001735      0x494 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
- .debug_info    0x00001bc9      0x6de TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
- .debug_info    0x000022a7      0x4fa TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
- .debug_info    0x000027a1      0x2b8 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
- .debug_info    0x00002a59      0xdba TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
- .debug_info    0x00003813      0x451 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
- .debug_info    0x00003c64      0x3d7 Src\system_stm32f1xx.o
- .debug_info    0x0000403b      0x7e6 Src\stm32f1xx_it.o
- .debug_info    0x00004821      0xe3a Src\stm32f1xx_hal_msp.o
- .debug_info    0x0000565b     0x118d Src\main.o
- .debug_info    0x000067e8      0x3e7 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
- .debug_info    0x00006bcf     0x10f6 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
- .debug_info    0x00007cc5      0x4b2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
- .debug_info    0x00008177     0x126e Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
- .debug_info    0x000093e5      0x616 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
- .debug_info    0x000099fb      0xbb2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
- .debug_info    0x0000a5ad      0x60c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
- .debug_info    0x0000abb9      0xc03 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
- .debug_info    0x0000b7bc      0xa76 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
- .debug_info    0x0000c232     0x1088 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
- .debug_info    0x0000d2ba      0x636 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
- .debug_info    0x0000d8f0       0x9c Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
+.debug_info     0x00000000     0xdabf
+ .debug_info    0x00000000      0x411 TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
+ .debug_info    0x00000411      0x22f TrueSTUDIO\Coldenberg17\UsrCode\Managers\LightManager\LightManager.o
+ .debug_info    0x00000640      0x3af TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
+ .debug_info    0x000009ef      0x5f7 TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
+ .debug_info    0x00000fe6      0x2a9 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
+ .debug_info    0x0000128f      0x1de TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
+ .debug_info    0x0000146d      0x162 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
+ .debug_info    0x000015cf      0x167 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
+ .debug_info    0x00001736      0x494 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+ .debug_info    0x00001bca      0x810 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+ .debug_info    0x000023da      0x4fa TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+ .debug_info    0x000028d4      0x2b8 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
+ .debug_info    0x00002b8c      0xdba TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+ .debug_info    0x00003946      0x451 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+ .debug_info    0x00003d97      0x3d7 Src\system_stm32f1xx.o
+ .debug_info    0x0000416e      0x7e6 Src\stm32f1xx_it.o
+ .debug_info    0x00004954      0xe3a Src\stm32f1xx_hal_msp.o
+ .debug_info    0x0000578e     0x118d Src\main.o
+ .debug_info    0x0000691b      0x3e7 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
+ .debug_info    0x00006d02     0x10f6 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+ .debug_info    0x00007df8      0x4b2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
+ .debug_info    0x000082aa     0x126e Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+ .debug_info    0x00009518      0x616 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
+ .debug_info    0x00009b2e      0xbb2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
+ .debug_info    0x0000a6e0      0x60c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+ .debug_info    0x0000acec      0xc03 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+ .debug_info    0x0000b8ef      0xa76 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
+ .debug_info    0x0000c365     0x1088 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+ .debug_info    0x0000d3ed      0x636 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+ .debug_info    0x0000da23       0x9c Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
 
 .debug_abbrev   0x00000000     0x3536
  .debug_abbrev  0x00000000      0x194 TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
@@ -1287,31 +1286,31 @@ OUTPUT(Coldenberg17.elf elf32-littlearm)
  .debug_abbrev  0x000032cf      0x255 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
  .debug_abbrev  0x00003524       0x12 Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
 
-.debug_loc      0x00000000     0x4625
+.debug_loc      0x00000000     0x46bf
  .debug_loc     0x00000000      0x12c TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
  .debug_loc     0x0000012c      0x10b TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
  .debug_loc     0x00000237       0xba TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
  .debug_loc     0x000002f1       0x21 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
  .debug_loc     0x00000312       0x21 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
  .debug_loc     0x00000333       0x74 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
- .debug_loc     0x000003a7       0x3d TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
- .debug_loc     0x000003e4       0x78 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
- .debug_loc     0x0000045c       0xa2 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
- .debug_loc     0x000004fe       0x85 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
- .debug_loc     0x00000583       0x35 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
- .debug_loc     0x000005b8       0xe6 Src\system_stm32f1xx.o
- .debug_loc     0x0000069e       0x9a Src\stm32f1xx_hal_msp.o
- .debug_loc     0x00000738      0x144 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
- .debug_loc     0x0000087c      0xd9e Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
- .debug_loc     0x0000161a      0x2b2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
- .debug_loc     0x000018cc      0xa6c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
- .debug_loc     0x00002338      0x329 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
- .debug_loc     0x00002661      0x6d2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
- .debug_loc     0x00002d33      0x2f3 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
- .debug_loc     0x00003026      0x443 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
- .debug_loc     0x00003469      0x666 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
- .debug_loc     0x00003acf      0xadb Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
- .debug_loc     0x000045aa       0x7b Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+ .debug_loc     0x000003a7       0xd7 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+ .debug_loc     0x0000047e       0x78 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+ .debug_loc     0x000004f6       0xa2 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
+ .debug_loc     0x00000598       0x85 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+ .debug_loc     0x0000061d       0x35 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+ .debug_loc     0x00000652       0xe6 Src\system_stm32f1xx.o
+ .debug_loc     0x00000738       0x9a Src\stm32f1xx_hal_msp.o
+ .debug_loc     0x000007d2      0x144 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
+ .debug_loc     0x00000916      0xd9e Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+ .debug_loc     0x000016b4      0x2b2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
+ .debug_loc     0x00001966      0xa6c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+ .debug_loc     0x000023d2      0x329 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
+ .debug_loc     0x000026fb      0x6d2 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
+ .debug_loc     0x00002dcd      0x2f3 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+ .debug_loc     0x000030c0      0x443 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+ .debug_loc     0x00003503      0x666 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
+ .debug_loc     0x00003b69      0xadb Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+ .debug_loc     0x00004644       0x7b Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
 
 .debug_aranges  0x00000000      0xa40
  .debug_aranges
@@ -1407,96 +1406,96 @@ OUTPUT(Coldenberg17.elf elf32-littlearm)
  .debug_ranges  0x00000c88       0xa0 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
  .debug_ranges  0x00000d28       0x20 Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
 
-.debug_line     0x00000000     0x6e4e
+.debug_line     0x00000000     0x6e65
  .debug_line    0x00000000      0x316 TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
  .debug_line    0x00000316      0x2b1 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LightManager\LightManager.o
  .debug_line    0x000005c7      0x289 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
- .debug_line    0x00000850      0x2ac TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
- .debug_line    0x00000afc      0x221 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
- .debug_line    0x00000d1d      0x1b2 TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
- .debug_line    0x00000ecf      0x191 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
- .debug_line    0x00001060      0x1a3 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
- .debug_line    0x00001203      0x2d2 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
- .debug_line    0x000014d5      0x2b8 TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
- .debug_line    0x0000178d      0x457 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
- .debug_line    0x00001be4      0x265 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
- .debug_line    0x00001e49      0x337 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
- .debug_line    0x00002180      0x2e3 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
- .debug_line    0x00002463      0x1cc Src\system_stm32f1xx.o
- .debug_line    0x0000262f      0x309 Src\stm32f1xx_it.o
- .debug_line    0x00002938      0x31c Src\stm32f1xx_hal_msp.o
- .debug_line    0x00002c54      0x75e Src\main.o
- .debug_line    0x000033b2      0x343 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
- .debug_line    0x000036f5      0x9e5 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
- .debug_line    0x000040da      0x358 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
- .debug_line    0x00004432      0x7ba Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
- .debug_line    0x00004bec      0x3af Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
- .debug_line    0x00004f9b      0x4a0 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
- .debug_line    0x0000543b      0x463 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
- .debug_line    0x0000589e      0x379 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
- .debug_line    0x00005c17      0x5a3 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
- .debug_line    0x000061ba      0x867 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
- .debug_line    0x00006a21      0x381 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
- .debug_line    0x00006da2       0xac Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
+ .debug_line    0x00000850      0x2ad TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
+ .debug_line    0x00000afd      0x221 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
+ .debug_line    0x00000d1e      0x1b2 TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
+ .debug_line    0x00000ed0      0x191 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
+ .debug_line    0x00001061      0x1a3 TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
+ .debug_line    0x00001204      0x2d2 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+ .debug_line    0x000014d6      0x2ce TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+ .debug_line    0x000017a4      0x457 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+ .debug_line    0x00001bfb      0x265 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
+ .debug_line    0x00001e60      0x337 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+ .debug_line    0x00002197      0x2e3 TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+ .debug_line    0x0000247a      0x1cc Src\system_stm32f1xx.o
+ .debug_line    0x00002646      0x309 Src\stm32f1xx_it.o
+ .debug_line    0x0000294f      0x31c Src\stm32f1xx_hal_msp.o
+ .debug_line    0x00002c6b      0x75e Src\main.o
+ .debug_line    0x000033c9      0x343 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
+ .debug_line    0x0000370c      0x9e5 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+ .debug_line    0x000040f1      0x358 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
+ .debug_line    0x00004449      0x7ba Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+ .debug_line    0x00004c03      0x3af Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
+ .debug_line    0x00004fb2      0x4a0 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
+ .debug_line    0x00005452      0x463 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+ .debug_line    0x000058b5      0x379 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+ .debug_line    0x00005c2e      0x5a3 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
+ .debug_line    0x000061d1      0x867 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+ .debug_line    0x00006a38      0x381 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+ .debug_line    0x00006db9       0xac Drivers\CMSIS\Device\ST\STM32F1xx\Source\Templates\gcc\startup_stm32f100xb.o
 
-.debug_str      0x00000000     0x323d
+.debug_str      0x00000000     0x3388
  .debug_str     0x00000000      0x32b TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
                                 0x386 (size before relaxing)
  .debug_str     0x0000032b      0x12d TrueSTUDIO\Coldenberg17\UsrCode\Managers\LightManager\LightManager.o
                                 0x2f7 (size before relaxing)
  .debug_str     0x00000458      0x145 TrueSTUDIO\Coldenberg17\UsrCode\Managers\LedsManager\LedsManager.o
                                 0x315 (size before relaxing)
- .debug_str     0x0000059d      0x44c TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
-                                0x625 (size before relaxing)
- .debug_str     0x000009e9      0x14c TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
+ .debug_str     0x0000059d      0x43c TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
+                                0x622 (size before relaxing)
+ .debug_str     0x000009d9      0x14c TrueSTUDIO\Coldenberg17\UsrCode\Framework\Flash\Flash.o
                                 0x325 (size before relaxing)
- .debug_str     0x00000b35       0xd6 TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
+ .debug_str     0x00000b25       0xd6 TrueSTUDIO\Coldenberg17\UsrCode\Framework\FIR\FIR.o
                                 0x27a (size before relaxing)
- .debug_str     0x00000c0b       0xdc TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
+ .debug_str     0x00000bfb       0xdc TrueSTUDIO\Coldenberg17\UsrCode\Framework\Debouncer\Debouncer.o
                                 0x23d (size before relaxing)
- .debug_str     0x00000ce7       0x4d TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
+ .debug_str     0x00000cd7       0x4d TrueSTUDIO\Coldenberg17\UsrCode\Framework\Counter\Counter.o
                                 0x222 (size before relaxing)
- .debug_str     0x00000d34      0x116 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
+ .debug_str     0x00000d24      0x116 TrueSTUDIO\Coldenberg17\UsrCode\Application\Relays\Relays.o
                                 0x375 (size before relaxing)
- .debug_str     0x00000e4a      0x18f TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
-                                0x5f0 (size before relaxing)
- .debug_str     0x00000fd9       0xf7 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+ .debug_str     0x00000e3a      0x2ea TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
+                                0x73b (size before relaxing)
+ .debug_str     0x00001124       0xf7 TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
                                 0x451 (size before relaxing)
- .debug_str     0x000010d0       0x91 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
+ .debug_str     0x0000121b       0x91 TrueSTUDIO\Coldenberg17\UsrCode\Application\LEDs\LEDs.o
                                 0x2cf (size before relaxing)
- .debug_str     0x00001161      0x123 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
+ .debug_str     0x000012ac      0x123 TrueSTUDIO\Coldenberg17\UsrCode\Application\Display\Display.o
                                 0x33c (size before relaxing)
- .debug_str     0x00001284       0xcb TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
+ .debug_str     0x000013cf       0xcb TrueSTUDIO\Coldenberg17\UsrCode\Application\Buttons\Buttons.o
                                 0x401 (size before relaxing)
- .debug_str     0x0000134f      0x12a Src\system_stm32f1xx.o
+ .debug_str     0x0000149a      0x12a Src\system_stm32f1xx.o
                                 0x2c0 (size before relaxing)
- .debug_str     0x00001479      0x150 Src\stm32f1xx_it.o
+ .debug_str     0x000015c4      0x150 Src\stm32f1xx_it.o
                                 0x758 (size before relaxing)
- .debug_str     0x000015c9      0x4ee Src\stm32f1xx_hal_msp.o
+ .debug_str     0x00001714      0x4ee Src\stm32f1xx_hal_msp.o
                                 0xb51 (size before relaxing)
- .debug_str     0x00001ab7      0x2ea Src\main.o
+ .debug_str     0x00001c02      0x2ea Src\main.o
                                 0xee4 (size before relaxing)
- .debug_str     0x00001da1       0xb9 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
+ .debug_str     0x00001eec       0xb9 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_wwdg.o
                                 0x3be (size before relaxing)
- .debug_str     0x00001e5a      0x3a5 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
+ .debug_str     0x00001fa5      0x3a5 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.o
                                 0x983 (size before relaxing)
- .debug_str     0x000021ff       0xb1 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
+ .debug_str     0x0000234a       0xb1 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.o
                                 0x395 (size before relaxing)
- .debug_str     0x000022b0      0x15b Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
+ .debug_str     0x000023fb      0x15b Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.o
                                 0x5f6 (size before relaxing)
- .debug_str     0x0000240b      0x102 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
+ .debug_str     0x00002556      0x102 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.o
                                 0x411 (size before relaxing)
- .debug_str     0x0000250d      0x39c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
+ .debug_str     0x00002658      0x39c Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.o
                                 0x658 (size before relaxing)
- .debug_str     0x000028a9      0x162 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
+ .debug_str     0x000029f4      0x162 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.o
                                 0x52e (size before relaxing)
- .debug_str     0x00002a0b      0x227 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
+ .debug_str     0x00002b56      0x227 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.o
                                 0x88d (size before relaxing)
- .debug_str     0x00002c32      0x291 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
+ .debug_str     0x00002d7d      0x291 Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc_ex.o
                                 0x783 (size before relaxing)
- .debug_str     0x00002ec3      0x1ff Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
+ .debug_str     0x0000300e      0x1ff Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_adc.o
                                 0x8b6 (size before relaxing)
- .debug_str     0x000030c2      0x17b Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
+ .debug_str     0x0000320d      0x17b Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.o
                                 0x720 (size before relaxing)
 
 .comment        0x00000000       0x83
@@ -1918,9 +1917,9 @@ Logic_Perform                                     TrueSTUDIO\Coldenberg17\UsrCod
 MemManage_Handler                                 Src\stm32f1xx_it.o
 NMI_Handler                                       Src\stm32f1xx_it.o
 Ntc_GetRawValue                                   TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
-                                                  TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
 Ntc_GetValue                                      TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
                                                   TrueSTUDIO\Coldenberg17\UsrCode\Application\Logic.o
+                                                  TrueSTUDIO\Coldenberg17\UsrCode\Managers\BluetoothManager\BluetoothManager.o
                                                   TrueSTUDIO\Coldenberg17\UsrCode\Managers\TemperatureManager\TemperatureManager.o
 Ntc_Initialize                                    TrueSTUDIO\Coldenberg17\UsrCode\Application\Ntc\Ntc.o
                                                   Src\main.o

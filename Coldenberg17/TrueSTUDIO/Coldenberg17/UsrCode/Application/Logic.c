@@ -17,9 +17,10 @@
 #include "Managers/TemperatureManager/TemperatureManager.h"
 #include "Managers/LedsManager/LedsManager.h"
 
-#define DefaultRestoredTemp 20u
-#define dMinTemp 5u
-#define dMaxTemp 30u
+#define dMinTemp 6u
+#define dMaxTemp 28u
+/* For safety reasons assume high temp */
+#define DefaultRestoredTemp dMaxTemp-1
 
 typedef enum
 {
@@ -137,6 +138,7 @@ static void Logic_SetState( LogicState_T eNewState )
 
 	case dLogicDisplaySetTemp:
 		LedsManager_SetAllOn();
+		/* Display set temperature for 3s (10ms perform tick) */
 		Counter_SetTimeout( &kLogic.u16Timeout, 300U );
 		break;
 

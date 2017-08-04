@@ -21,7 +21,7 @@ void BluetoothManager_Perform(void)
 {
 	if ( Bluetooth_IsConnected() )
 	{
-		u8AdcValue = Ntc_GetRawValue() / 12u;
+		u8AdcValue = Ntc_GetValue();
 		HAL_UART_Transmit_IT(&huart2, &u8AdcValue, 1);
 	}
 

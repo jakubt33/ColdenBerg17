@@ -16,51 +16,110 @@ FIR_Buffer tBuffer[ dBufferSize ];
 FIR_T kFilter;
 
 extern ADC_HandleTypeDef hadc1;
-#define dTempRange 32
-#define dADCModifier 0
+#define dTempMax		28
+#define dTempMin		6
 
-// 9,5st - 2360
-//11,0st - 2200
-//19,0st - 1800
-//24,5st - 1380
-uint16_t tempTable[dTempRange] =
+typedef enum
+{
+	d6_0C = 0,
+	d6_5C,
+	d7_0C,
+	d7_5C,
+	d8_0C,
+	d8_5C,
+	d9_0C,
+	d9_5C,
+	d10_0C,
+	d10_5C,
+	d11_0C,
+	d11_5C,
+	d12_0C,
+	d12_5C,
+	d13_0C,
+	d13_5C,
+	d14_0C,
+	d14_5C,
+	d15_0C,
+	d15_5C,
+	d16_0C,
+	d16_5C,
+	d17_0C,
+	d17_5C,
+	d18_0C,
+	d18_5C,
+	d19_0C,
+	d19_5C,
+	d20_0C,
+	d20_5C,
+	d21_0C,
+	d21_5C,
+	d22_0C,
+	d22_5C,
+	d23_0C,
+	d23_5C,
+	d24_0C,
+	d24_5C,
+	d25_0C,
+	d25_5C,
+	d26_0C,
+	d26_5C,
+	d27_0C,
+	d27_5C,
+	d28_0C,
+	dTempLast,
+}Celcius_T;
+
+uint16_t tempTable[dTempLast+1][2] =
 {
 // Celsius = ADC max value
-	[0]  = 3050,
-	[1]  = 2988 - dADCModifier,
-	[2]  = 2922 - dADCModifier,
-	[3]  = 2856 - dADCModifier,
-	[4]  = 2790 - dADCModifier,
-	[5]  = 2724 - dADCModifier,
-	[6]  = 2658 - dADCModifier,
-	[7]  = 2592 - dADCModifier,
-	[8]  = 2526 - dADCModifier,
-	[9]  = 2460 - dADCModifier,
-		[10] = 2200 - dADCModifier,
-	[11] = 2328 - dADCModifier,
-	[12] = 2262 - dADCModifier,
-	[13] = 2196 - dADCModifier,
-	[14] = 2130 - dADCModifier,
-	[15] = 2064 - dADCModifier,
-	[16] = 1998 - dADCModifier,
-	[17] = 1932 - dADCModifier,
-	[18] = 1866 - dADCModifier,
-		[19] = 1800 - dADCModifier,
-	[20] = 1720 - dADCModifier,
-	[21] = 1640 - dADCModifier,
-	[22] = 1560 - dADCModifier,
-	[23] = 1480 - dADCModifier,
-	[24] = 1400 - dADCModifier,
-	[25] = 1320 - dADCModifier,
-	[26] = 1240 - dADCModifier,
-	[27] = 1160 - dADCModifier,
-	[28] = 1080 - dADCModifier,
-	[29] = 1000 - dADCModifier,
-	[30] =  920 - dADCModifier,
+	[ d6_0C  ] = { 2400, 2424 },
+	[ d6_5C  ] = { 2423, 2409 },
+	[ d7_0C  ] = { 2408, 2388 },
+	[ d7_5C  ] = { 2387, 2367 },
+	[ d8_0C  ] = { 2366, 2343 },
+	[ d8_5C  ] = { 2342, 2313 },
+	[ d9_0C  ] = { 2312, 2286 },
+	[ d9_5C  ] = { 2285, 2250 },
+	[ d10_0C ] = { 2249, 2208 },
+	[ d10_5C ] = { 2207, 2184 },
+	[ d11_0C ] = { 2183, 2157 },
+	[ d11_5C ] = { 2156, 2121 },
+	[ d12_0C ] = { 2120, 2091 },
+	[ d12_5C ] = { 2090, 2073 },
+	[ d13_0C ] = { 2072, 2055 },
+	[ d13_5C ] = { 2054, 2025 },
+	[ d14_0C ] = { 2024, 2001 },
+	[ d14_5C ] = { 2000, 1968 },
+	[ d15_0C ] = { 1967, 1935 },
+	[ d15_5C ] = { 1934, 1914 },
+	[ d16_0C ] = { 1913, 1890 },
+	[ d16_5C ] = { 1889, 1860 },
+	[ d17_0C ] = { 1859, 1836 },
+	[ d17_5C ] = { 1835, 1839 },
+	[ d18_0C ] = { 1838, 1809 },
+	[ d18_5C ] = { 1808, 1755 },
+	[ d19_0C ] = { 1754, 1749 },
+	[ d19_5C ] = { 1748, 1746 },
+	[ d20_0C ] = { 1745, 1719 },
+	[ d20_5C ] = { 1718, 1671 },
+	[ d21_0C ] = { 1670, 1641 },
+	[ d21_5C ] = { 1640, 1632 },
+	[ d22_0C ] = { 1631, 1614 },
+	[ d22_5C ] = { 1613, 1590 },
+	[ d23_0C ] = { 1589, 1557 },
+	[ d23_5C ] = { 1556, 1530 },
+	[ d24_0C ] = { 1529, 1503 },
+	[ d24_5C ] = { 1502, 1470 },
+	[ d25_0C ] = { 1469, 1431 },
+	[ d25_5C ] = { 1430, 1392 },
+	[ d26_0C ] = { 1391, 1365 },
+	[ d26_5C ] = { 1364, 1344 },
+	[ d27_0C ] = { 1343, 1323 },
+	[ d27_5C ] = { 1322, 1296 },
+	[ d28_0C ] = { 1295, 1350 },
 
-	[31] = 0x0,
+	[ dTempLast ] = { 0, 1349 }
 };
-
 
 /*! Public functions */
 void Ntc_Initialize( void )
@@ -82,12 +141,20 @@ uint16_t Ntc_GetValue( void  )
 {
 	uint8_t u8Temperature = 0u;
 	uint16_t ADC = FIR_GetFilteredValue( &kFilter );
-	while( tempTable[u8Temperature] > ADC )
+
+	uint8_t tempInterator = 0u;
+
+	/* Temperature is too low so return 0deg!! */
+	if( tempTable[tempInterator][0] <= ADC)
+		return 0u;
+
 	{
-		u8Temperature++;
+		tempInterator++;
 	}
 
-	return (u8Temperature < dTempRange - 1U) ? u8Temperature : dNtc_ErrorTemp;
+	//temp resolution is 0.5deg */
+	u8Temperature = (tempInterator / 2u ) + dTempMin;
+	return (tempInterator < dTempLast) ? u8Temperature : dNtc_ErrorTemp;
 }
 
 uint16_t Ntc_GetRawValue( void )

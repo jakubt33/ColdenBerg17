@@ -14,9 +14,9 @@
 
 #define dTempHisteresis 1u
 
-#define dMaxCoolingTime 		30*60*10 //30min cooling
+#define dMaxCoolingTime 		20*60*10 //20min cooling time
 #define dTimeStopDuringCooling   2*60*10 //2min  pause
-#define dInitTime				   10*10 //10s
+#define dInitTime				dTimeStopDuringCooling //pause needed to cool down compressor
 
 
 typedef enum
@@ -41,7 +41,7 @@ typedef struct
 do{                                   \
 	if ( dNtc_ErrorTemp == uNtcTemp ) \
 	{                                 \
-		SetState(dState_Error);        \
+		SetState(dState_Error);       \
 	}                                 \
 }while(0)
 
