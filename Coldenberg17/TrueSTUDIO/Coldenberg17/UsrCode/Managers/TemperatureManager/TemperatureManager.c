@@ -63,11 +63,11 @@ void TemperatureManager_Perform( void )
 	case dState_Pause:
 		if ( Counter_IsTimeoutExpired( &oTempManager.uTimer ) )
 		{
-			if ( uTempTarget - dTempHisteresis > uNtcTemp )
+			if ( uTempTarget - dTempHisteresis >= uNtcTemp )
 			{
 				SetState(dState_Warming);
 			}
-			else if ( uTempTarget + dTempHisteresis < uNtcTemp )
+			else if ( uTempTarget + dTempHisteresis <= uNtcTemp )
 			{
 				SetState(dState_Cooling);
 			}
@@ -75,7 +75,7 @@ void TemperatureManager_Perform( void )
 		break;
 
 	case dState_Cooling:
-		if ( uTempTarget - dTempHisteresis > uNtcTemp )
+		if ( uTempTarget - dTempHisteresis >= uNtcTemp )
 		{
 			SetState(dState_Warming);
 		}
@@ -86,7 +86,7 @@ void TemperatureManager_Perform( void )
 		break;
 
 	case dState_Warming:
-		if ( uTempTarget + dTempHisteresis < uNtcTemp )
+		if ( uTempTarget + dTempHisteresis <= uNtcTemp )
 		{
 			SetState(dState_Cooling);
 		}

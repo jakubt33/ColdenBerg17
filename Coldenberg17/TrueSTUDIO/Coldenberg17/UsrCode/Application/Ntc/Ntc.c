@@ -148,6 +148,7 @@ uint16_t Ntc_GetValue( void  )
 	if( tempTable[tempInterator][0] <= ADC)
 		return 0u;
 
+	while (!( ADC <= tempTable[tempInterator][0] && ADC >= tempTable[tempInterator][1] ))
 	{
 		tempInterator++;
 	}
